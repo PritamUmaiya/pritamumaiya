@@ -1,14 +1,109 @@
-/*Import CSS*/
-@import url("css/layout.css");
-@import url("css/color.css");
-@import url("css/typography.css");
-@import url("css/dimension.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {box-sizing: border-box;}
 
 body {
-    background-color: var(--bg);
-    color: var(--fg);
-    font-family: var(--body-font);
+    margin: 0;
+    font-family: 'Poppins';
     font-size: 16px;
+    background-color: #233445;
+    color: #fdfdfd;
 }
 
-.box-shadow {box-shadow: 0 0 1px var(--primary);}
+header {
+    padding: 15px;
+    background-color: #2e4359;
+    margin-bottom: 60px;
+}
+
+h1, h2 {
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.7px;
+}
+
+main {
+    display: block;
+    padding: 0 20px;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    border-radius: 5px;
+    background-color: #2e4359;
+    margin-bottom: 50px;
+}
+
+.cover-image {
+    height: 200px;
+    background-color: #1057a2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.avatar-img {
+    display: block;
+    width: 170px;
+    aspect-ratio: 1/1;
+    border: 10px solid #2e4359;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    padding: 0 10px;
+}
+
+.button button {
+    width: 50%;
+    padding: 10px 15px;
+    border: 10px solid #2e4359;
+    border-radius: 5px;
+    background-color: #1057a2;
+    color: #fdfdfd;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+  cursor: pointer;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+button span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+p {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.bio {
+    color:#bababa;
+    font-size: 80%;
+    padding: 0 30px;
+}
