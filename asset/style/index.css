@@ -1,0 +1,14 @@
+/*Import CSS*/
+@import url("css/layout.css");
+@import url("css/color.css");
+@import url("css/typography.css");
+@import url("css/dimension.css");
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--body-font);
+    font-size: 16px;
+}
+
+.box-shadow {box-shadow: 0 0 1px var(--primary);}
