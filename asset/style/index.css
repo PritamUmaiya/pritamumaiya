@@ -6,13 +6,13 @@ body {
     margin: 0;
     font-family: 'Poppins';
     font-size: 16px;
-    background-color: #233445;
-    color: #fdfdfd;
+    background-color: #fdfdfd;
+    color: #080808;
 }
 
 header {
     padding: 15px;
-    background-color: #2e4359;
+    box-shadow: 0 0 1px #333;
     margin-bottom: 60px;
 }
 
@@ -32,7 +32,7 @@ main {
 
 .card {
     border-radius: 5px;
-    background-color: #2e4359;
+    box-shadow: 0 0 1px #333;
     margin-bottom: 50px;
 }
 
@@ -47,7 +47,7 @@ main {
     display: block;
     width: 170px;
     aspect-ratio: 1/1;
-    border: 10px solid #2e4359;
+    border: 10px solid #fdfdfd;
     border-radius: 50%;
     object-fit: cover;
     margin-top: -90px;
