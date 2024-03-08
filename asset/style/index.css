@@ -62,7 +62,7 @@ main {
 .button button {
     width: 50%;
     padding: 10px 15px;
-    border: 10px solid #fdfdfd;
+    border: none;
     border-radius: 5px;
     background-color: #1872bd;
     color: #fdfdfd;
