@@ -1,0 +1,37 @@
+.intro-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 20px;
+}
+
+.intro-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.about-me {
+    background-color: var(--bs-purple);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 100px;
+}
