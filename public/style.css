@@ -61,31 +61,25 @@ main {
 }
 
 .chat-container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    
 }
 
 .chat-box {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
+    
+    
 }
 
 .chat-box .message {
-    margin: 10px 0;
     padding: 10px;
-    border-radius: 10px;
-    max-width: 70%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--bs-primary);
 }
 
 .message.user {
-    background-color: var(--bs-primary);
-    align-self: flex-end;
 }
 
 .message.bot {
-    background-color: var(--bs-success);
-    align-self: flex-start;
+    
 }
 
