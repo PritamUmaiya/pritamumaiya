@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "pritam-jaiswal"
+  },
+  "hosting": {
+    "site": "pritamjaiswal" // or "priam-jaiswal" for the other site
+  }
+}
