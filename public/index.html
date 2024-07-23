@@ -19,6 +19,7 @@
     <header class="navbar navbar-expand-lg bg-body-tertiary mb-3">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand"><strong class="text-primary">P</strong>ortfolio</a>
+            <button type="button" class="btn" onclick="location.href='mailto:pritam-jaiswal@outlook.com'"><i class="fa-solid fa-envelope" style="font-size:23px;"></i></button>
         </div>
     </header>
     
@@ -88,12 +89,35 @@
     </main>
     
     <!--Floating btn-->
-    <button type="button" class="btn btn-primary" onclick="location.href='mailto:pritam-jaiswal@outlook.com'" id="floatingMailBtn"><i class="fa-solid fa-envelope" title="Email"></i></button>
+    <button type="button" class="btn btn-primary" id="chatBotBtn" data-bs-toggle="modal" data-bs-target="#chatBotModal"><i class="fa-solid fa-message"></i></button>
+
+    <!-- Chat Bot -->
+    <!-- Modal -->
+    <div class="modal fade" id="chatBotModal" tabindex="-1" aria-labelledby="chatBotModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="chatBotModalLabel">Assistant</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <div class="chat-container">
+                        <div class="chat-box" id="chat-box"></div>
+                    </div>
+                </div>
+                <div class="card absolute-bottom p-2 d-flex flex-row justify-content-center align-items-center">
+                    <input type="text" class="form-control" id="user-input" placeholder="Type a message...">
+                    <button id="send-btn" type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!--Footer-->
     <footer class="container-fluid bg-black text-center text-white p-1">
         <p class="p-1">Built with love <span class="text-danger"><i class="fa-solid fa-heart"></i></span> ~ Pritam Jaiswal</p>
     </footer>
 </body>
+    <script src="script.js"></script>
 
 </html>
