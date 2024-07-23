@@ -35,3 +35,13 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 100px;
 }
+
+#chatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 15px 10px;
+    border-radius: 50%;
+    outline: none;
+}
