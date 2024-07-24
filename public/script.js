@@ -6,7 +6,7 @@ document.getElementById('user-input').addEventListener('keypress', function(even
 });
 
 const responses = {
-    "hey": ["Hi, how can I assist you?.", "Hey, What you want to know about Pritam?"],
+    "hey": ["Hello, nice to meet you.", "Hey, What you want to know about Pritam?"],
     "hello": ["Hi, how can I assist you?.", "Hey, What you want to know about Pritam?"],
     "hi": ["Hi, how can I assist you?.", "Hey, What you want to know about Pritam?"],
     "name": ["My name is Pritam Jaiswal.", "I am called Pritam Jaiswal."],
