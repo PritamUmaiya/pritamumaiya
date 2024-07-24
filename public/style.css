@@ -73,7 +73,6 @@ main {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    background-color: var(--bs-primary);
 }
 
 .message.user {
