@@ -42,9 +42,9 @@
 
             <div class="collapse navbar-collapse" id="navLink">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#message">Contact</a>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
     </nav>
 
     <!--Header-->
-    <header class="bg-body mt-1 row">
+    <header class="bg-body mt-1 row" id="home">
         
         <section class="col-12 col-md-6 d-block d-md-none text-center">
             <img src="images/avatar.png" alt="Pritam Jaiswal" class="avatar-img border border-5 border-secondary rounded-circle object-fit-cover" style="width:150px;height:150px;" onclick="window.location.href='images/avatar.png';" />
@@ -69,20 +69,19 @@
                     <a href="https://github.com/ipritamjaiswal" title="GitHub" class="text-body text-decoration-none"><i class="fa-brands fa-github"></i></a>
                     <a href="https://facebook.com/ipritamjaiswal" title="Facebook" class="text-body text-decoration-none"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.linkedin.com/in/ipritamjaiswal" title="Linkedin" class="text-body text-decoration-none"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@ipritamjaiswal" title="YouTube" class="text-body text-decoration-none"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@ipritamjaiswal" title="YouTube" class="text-body text-decoration-none"><i class="fa-brands fa-square-youtube"></i></a>
                 </p>
-
-                 <!--Action Buttons-->
-                 <div class="d-inline-flex gap-2 mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2">
-                        <i class="fa-solid fa-download"></i>
-                        <span>Download CV</span>
-                    </a>
-                    <a href="#message" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Message</span>
-                    </a>
-                </div>
+            </div>
+            <!--Action Buttons-->
+            <div class="d-flex d-md-inline-flex justify-content-center gap-2 mt-3 action-btns">
+                <a href="https://docs.google.com/document/d/1RjpjG1YSldqQ13AWeBlqazx4UJJ9jTsICO24Qby5_68/edit?usp=drive_link" target="_blank" class="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download CV</span>
+                </a>
+                <a href="#message" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Message</span>
+                </a>
             </div>
         </section>
 
@@ -91,6 +90,167 @@
         </section>
         
     </header>
+
+    <!--Main-->
+    <main class="bg-body mt-1">
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link rounded-pill active" id="portfolio-tab" data-bs-toggle="pill" data-bs-target="#portfolio" type="button" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</button>
+            </li>
+            <li class="nav-item" >
+                <button class="nav-link rounded-pill" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            </li>
+        </ul>
+
+        <section class="tab-content mt-5">
+
+            <section class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab" tabindex="0">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="images/1.png" class="card-img-top" alt="...">
+
+                            <div class="card-header">
+                                <span class="badge">Django</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Wiki</h5>
+                                <p class="card-text">
+                                    Full-stack Wikipedia web application built with Django framework.
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="https://github.com/ipritamjaiswal/wiki" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Code</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="images/2.jpg" class="card-img-top" alt="...">
+
+                            <div class="card-header">
+                                <span class="badge">Flask</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Authentication System</h5>
+                                <p class="card-text">
+                                    A full-stack flask application for 3 steps singup with OTP validation.
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="https://youtu.be/y9T-ceWiraE?si=gd3Octllvyvd1wdH" class="btn btn-sm btn-danger" target="_blank">
+                                    <i class="fa-brands fa-square-youtube"></i>
+                                    <span>Demo</span>
+                                </a>
+                                <a href="https://github.com/ipritamjaiswal/authentication-system" class="btn btn-sm btn-dark" target="_blank">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Code</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="images/3.jpg" class="card-img-top" alt="...">
+
+                            <div class="card-header">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Awesome text editor</h5>
+                                <p class="card-text">
+                                    Pure JavaScript application for editing text with basic editing tools.
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="https://ipritamjaiswal.github.io/text-editor/" class="btn btn-sm btn-success" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <span>Live</span>
+                                </a>
+                                <a href="https://youtu.be/bdeiPlGGI9E?si=dW1HZlg3fhDwavb7" class="btn btn-sm btn-danger" target="_blank">
+                                    <i class="fa-brands fa-square-youtube"></i>
+                                    <span>Demo</span>
+                                </a>
+                                <a href="https://github.com/ipritamjaiswal/text-editor" class="btn btn-sm btn-dark" target="_blank">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Code</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="images/4.jpg" class="card-img-top" alt="...">
+
+                            <div class="card-header">
+                                <span class="badge">Flask</span>
+                                <span class="badge">Bootstrap</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Task Manager</h5>
+                                <p class="card-text">
+                                    Task manager application with account. Built using Flask and Bootstrap.
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <a href="https://youtu.be/ZQHuhTVyEiA?si=z4wIDanGzJWsQb3a" class="btn btn-sm btn-danger" target="_blank">
+                                    <i class="fa-brands fa-square-youtube"></i>
+                                    <span>Demo</span>
+                                </a>
+                                <a href="https://github.com/ipritamjaiswal/task-manager" class="btn btn-sm btn-dark" target="_blank">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Code</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="mb-5 p-3 rounded bg-body-tertiary">
+                    <div class="mb-3">
+                        <h4>Profile</h4>
+                    </div>
+                    <div>
+                        <p class="d-flex align-items-center gap-2"><i class="fa-solid fa-briefcase"></i> <span>Full-stack Developer</span></p>
+                        <p class="d-flex align-items-center gap-2"><i class="fa-solid fa-location-dot"></i> <span>Katihar, India</span></p>
+                        <p class="d-flex align-items-center gap-2"><i class="fa-solid fa-envelope"></i> <span><a href="mailto:pritamjaiswal.me@gmail.com">pritamjaiswal.me@gmail.com</a></span></p>
+                    </div>
+                </div>
+
+                <div class="alert alert-primary d-flex align-items-center" role="alert">
+                    This website is under development, contact me with email instead!
+                </div>
+            </section>
+
+        </section>
+
+    </main>
 
     <!--Footer-->
     <footer class="bg-body mt-1 row">

@@ -1,5 +1,5 @@
 /*Bootstrap Customization*/
-.row {
+header.row, footer.row {
     --bs-gutter-x:0;
 }
 
@@ -19,6 +19,23 @@ footer {
     padding: 20px;
 }
 
+.action-btns .btn {
+    width: 45%;
+}
+
+main {
+    padding: 20px;
+}
+
+
+#pills-tab .nav-link {
+    font-size: 0.9rem;
+    padding: 5px 14px;
+    border: 1px solid var(--bs-primary);
+    margin-right: 10px;
+}
+
+
 @media (min-width:768px) {
     header {
         padding: 50px;
@@ -28,5 +45,11 @@ footer {
     }
     footer {
         padding: 50px;
+    }
+    .action-btns .btn {
+        width: auto;
+    }
+    main {
+        padding: 100px;
     }
 }
