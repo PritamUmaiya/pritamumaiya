@@ -1,0 +1,32 @@
+/*Bootstrap Customization*/
+.row {
+    --bs-gutter-x:0;
+}
+
+.navbar {
+    box-shadow: 0 0 2px #333;
+}
+
+header {
+    padding: 50px 10px;
+}
+
+.header-text {
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+}
+
+@media (min-width:768px) {
+    header {
+        padding: 50px;
+    }
+    .header-text {
+        text-align: left;
+    }
+    footer {
+        padding: 50px;
+    }
+}
