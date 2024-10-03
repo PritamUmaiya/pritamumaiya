@@ -3,6 +3,10 @@ header.row, footer.row {
     --bs-gutter-x:0;
 }
 
+.badge {
+    color: var(--bs-body-color);
+}
+
 .navbar {
     box-shadow: 0 0 2px #333;
 }
