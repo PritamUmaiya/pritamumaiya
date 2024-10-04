@@ -31,6 +31,10 @@ main {
     padding: 20px;
 }
 
+.skills .badge {
+    background-color: var(--bs-secondary-bg);
+}
+
 
 #pills-tab .nav-link {
     font-size: 0.9rem;
