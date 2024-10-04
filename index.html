@@ -271,27 +271,40 @@
             <div class="mb-3">
                 <h4>Send a message</h4>
             </div>
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" autocomplete="off" required />
-                    <label for="name">Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off" required />
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="off" required />
-                    <label for="subject">Subject</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Enter your message.." id="message" name="message" style="height: 100px" autocomplete="off" required></textarea>
-                    <label for="message">Message</label>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="width:100%;max-width:230px;">Send Message</button>
-                </div>
-            </form>
+            <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+  <!-- Hidden field to catch bots -->
+  <input type="hidden" name="form-name" value="contact">
+  
+  <!-- Invisible honeypot field -->
+  <p style="display:none;">
+    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+  </p>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" autocomplete="off" required />
+    <label for="name">Name</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off" required />
+    <label for="email">Email</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="off" required />
+    <label for="subject">Subject</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="Enter your message.." id="message" name="message" style="height: 100px" autocomplete="off" required></textarea>
+    <label for="message">Message</label>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary" style="width:100%;max-width:230px;">Send Message</button>
+  </div>
+</form>
+
         </section>
     </footer>
     <div class="p-2 text-center bg-black text-white">
