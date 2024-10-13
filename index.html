@@ -125,14 +125,14 @@
                 <div class="d-inline-flex flex-column align-items-center gap-3 mb-5 bg-body-tertiary p-3 rounded">
                     <img class="img-thumbnail" src="images/cover.jpg" alt="Cover" style="width:100px;">
                     <div>Want to read my diary?</div>
-                    
+
                     <!-- Download Button with Form Trigger -->
-                    <form id="diary-download-form" name="diary-download" method="POST" data-netlify="true" style="display:none;">
+                    <form id="diary-download-form" name="diary-download" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="diary-download">
                         <input type="hidden" name="download" value="Diary PDF downloaded">
                     </form>
                     
-                    <a class="btn btn-primary" href="diary.pdf" onclick="document.getElementById('diary-download-form').submit();">
+                    <a class="btn btn-primary" href="#" onclick="submitFormAndDownload();">
                         Download
                     </a>
                 </div>
@@ -376,6 +376,16 @@
     <div class="p-3 text-center bg-black text-white">
        Made with ❤️ Pritam Jaiswal
     </div>
-    
+    <script>
+        function submitFormAndDownload() {
+          // Submit the form
+          document.getElementById('diary-download-form').submit();
+      
+          // Wait briefly and then trigger the file download
+          setTimeout(function() {
+            window.location.href = 'diary.pdf';
+          }, 500); // 0.5 second delay to let the form submission process
+        }
+      </script>
 </body>
 </html>
