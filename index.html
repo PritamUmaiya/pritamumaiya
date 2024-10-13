@@ -121,12 +121,22 @@
 
             <section class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab" tabindex="0">
 
-                <!--Diary Pdf Download Link-->
+                <!-- Diary PDF Download Section -->
                 <div class="d-inline-flex flex-column align-items-center gap-3 mb-5 bg-body-tertiary p-3 rounded">
                     <img class="img-thumbnail" src="images/cover.jpg" alt="Cover" style="width:100px;">
                     <div>Want to read my diary?</div>
-                    <a class="btn btn-primary" href="diary.pdf">Download</a>
+                    
+                    <!-- Download Button with Form Trigger -->
+                    <form name="diary-download" method="POST" data-netlify="true" style="display:none;">
+                        <input type="hidden" name="form-name" value="diary-download">
+                        <input type="hidden" name="download" value="Diary PDF downloaded">
+                    </form>
+                    
+                    <a class="btn btn-primary" href="diary.pdf" onclick="document.forms['pdf-download'].submit();">
+                        Download
+                    </a>
                 </div>
+
 
                 <div class="row">
 
