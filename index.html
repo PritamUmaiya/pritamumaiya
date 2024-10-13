@@ -127,12 +127,12 @@
                     <div>Want to read my diary?</div>
                     
                     <!-- Download Button with Form Trigger -->
-                    <form name="diary-download" method="POST" data-netlify="true" style="display:none;">
+                    <form name="diary-download" method="POST" style="display:none;" netlify>
                         <input type="hidden" name="form-name" value="diary-download">
                         <input type="hidden" name="download" value="Diary PDF downloaded">
                     </form>
                     
-                    <a class="btn btn-primary" href="diary.pdf" onclick="document.forms['pdf-download'].submit();">
+                    <a class="btn btn-primary" href="diary.pdf" onclick="document.forms['diary-download'].submit();">
                         Download
                     </a>
                 </div>
