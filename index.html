@@ -378,13 +378,20 @@
     </div>
     <script>
         function submitFormAndDownload() {
-          // Submit the form
-          document.getElementById('diary-download-form').submit();
-      
-          // Wait briefly and then trigger the file download
-          setTimeout(function() {
+          // Create a FormData object from the form
+          const form = document.getElementById('diary-download-form');
+          const formData = new FormData(form);
+          
+          // Send form data asynchronously via fetch
+          fetch("/", {
+            method: "POST",
+            body: formData,
+          })
+          .then(() => {
+            // After successful form submission, trigger the file download
             window.location.href = 'diary.pdf';
-          }, 500); // 0.5 second delay to let the form submission process
+          })
+          .catch((error) => console.error('Error:', error));
         }
       </script>
 </body>
