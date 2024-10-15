@@ -105,6 +105,20 @@
         </div>
     </div>
 
+    <!-- Thank You Modal for diary model-->
+    <div class="modal fade" id="thankModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Thank you for downloading..
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!--Main-->
     <main class="bg-body mt-1">
 
@@ -122,19 +136,20 @@
             <section class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab" tabindex="0">
 
                 <!-- Diary PDF Download Section -->
-                <div class="d-inline-flex flex-column align-items-center gap-3 mb-5 bg-body-tertiary p-3 rounded">
+                <div class="d-inline-flex flex-row align-items-center gap-3 mb-5 bg-body-tertiary p-3 rounded">
                     <img class="img-thumbnail" src="images/cover.jpg" alt="Cover" style="width:100px;">
-                    <div>Want to read my diary?</div>
 
                     <!-- Download Button with Form Trigger -->
                     <form id="diary-download-form" name="diary-download" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="diary-download">
                         <input type="hidden" name="download" value="Diary PDF downloaded">
                     </form>
-                    
-                    <a class="btn btn-primary" href="#" onclick="submitFormAndDownload();">
-                        Download
-                    </a>
+                    <div class="d-flex flex-column gap-3">
+                        <div>Want to read my diary?</div>
+                        <a class="btn btn-primary" href="#" onclick="submitFormAndDownload();" data-bs-toggle="modal" data-bs-target="#thankModal">
+                            Download
+                        </a>
+                    </div>
                 </div>
 
 
