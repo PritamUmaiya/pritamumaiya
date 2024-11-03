@@ -1,5 +1,5 @@
 /*Bootstrap Customization*/
-header.row, footer.row {
+header.row {
     --bs-gutter-x:0;
 }
 
@@ -7,12 +7,8 @@ header.row, footer.row {
     color: var(--bs-body-color);
 }
 
-.navbar {
-    box-shadow: 0 0 2px #333;
-}
-
 header {
-    padding: 50px 10px;
+    padding: 50px 0px;
 }
 
 .header-text {
@@ -28,7 +24,7 @@ footer {
 }
 
 main {
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 .skills .badge {
@@ -45,19 +41,13 @@ main {
 
 
 @media (min-width:768px) {
-    header {
-        padding: 50px;
+    header, footer, main {
+        padding: 50px 100px;
     }
     .header-text {
         text-align: left;
     }
-    footer {
-        padding: 50px;
-    }
     .action-btns .btn {
         width: auto;
-    }
-    main {
-        padding: 100px;
     }
 }
