@@ -31,14 +31,12 @@ main {
     background-color: var(--bs-secondary-bg);
 }
 
-
 #pills-tab .nav-link {
     font-size: 0.9rem;
     padding: 5px 14px;
     border: 1px solid var(--bs-primary);
     margin-right: 10px;
 }
-
 
 @media (min-width:768px) {
     header, footer, main {
