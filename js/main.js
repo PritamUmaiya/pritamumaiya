@@ -17,7 +17,7 @@ function submitFormAndDownload() {
     })
     .then(() => {
       // After successful form submission, trigger the file download
-      window.location.href = 'pritam.pdf';
+      window.location.href = 'Dear_Umaiya.pdf';
     })
     .catch((error) => console.error('Error:', error));
 }
