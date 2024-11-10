@@ -1,3 +1,3 @@
-# Pritam Jaiswal
+# Pritam Umaiya
 
-Hello, My name is Pritam Jaiswal and I am a full-stack web developer.
+Hello, My name is Pritam Umaiya and I am a full-stack web developer.
