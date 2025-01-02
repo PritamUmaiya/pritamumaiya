@@ -5,34 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.setAttribute('data-bs-theme', initialTheme);
 
     // Handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission (page reload)
-
-        // Get form data
-        const formData = new FormData(this);
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
-
-        // Send data to the backend API
-        fetch('https://pritamumaiya.vercel.app/api/send-email/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',  // Set the content type to JSON
-        },
-        body: JSON.stringify(formObject)  // Convert the form data to a JSON string
-        })
-        .then(response => response.json())  // Parse JSON response from the server
-        .then(data => {
-            // Handle success or display a message
-            alert('Message sent successfully!');
-        })
-        .catch(error => {
-            // Handle errors if any
-            alert('Error sending message. Please try again later.');
-            console.error(error);
-        });
+    document.getElementById("contactForm").addEventListener("submit", async function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+      
+        const form = event.target;
+        const formData = new FormData(form);
+        const modalTitle = document.getElementById("feedbackModalLabel");
+        const modalMessage = document.getElementById("feedbackMessage");
+        const feedbackModal = new bootstrap.Modal(document.getElementById("feedbackModal"));
+      
+        try {
+          const response = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+          });
+      
+          if (response.ok) {
+            modalTitle.textContent = "Success!";
+            modalMessage.textContent = "Your message has been sent successfully.";
+            form.reset(); // Clear the form fields
+          } else {
+            modalTitle.textContent = "Error";
+            modalMessage.textContent = "Something went wrong. Please try again.";
+          }
+        } catch (error) {
+          modalTitle.textContent = "Error";
+          modalMessage.textContent = "An error occurred. Please check your internet connection and try again.";
+        }
+      
+        feedbackModal.show();
     });
-
+      
+      
 });

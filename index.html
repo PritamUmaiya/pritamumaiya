@@ -66,20 +66,22 @@
         
     </header>
 
-    <!-- Thank You Modal for diary model-->
-    <div class="modal fade" id="thankModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!--Form Feedback Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Downloaded</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="feedbackMessage"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-                Thank you for downloading..
-            </div>
-        </div>
         </div>
     </div>
+  
 
     <!--Main-->
     <main class="bg-body mt-1">
@@ -191,7 +193,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Task Manager</h5>
                                 <p class="card-text">
-                                    Task manager application with account. Built using Flask and Bootstrap.
+                                    Task manager app built using Flask and Bootstrap.
                                 </p>
                             </div>
 
@@ -289,23 +291,24 @@
                 <div class="mb-3">
                     <h4>Send a message</h4>
                 </div>
-                <form id="contactForm" method="POST">
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" autocomplete="off" required />
-                    <label for="name">Name</label>
-                  </div>
-                
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off" required />
-                    <label for="email">Email</label>
-                  </div>
-                
-                  <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Enter your message.." id="message" name="message" style="height: 100px" autocomplete="off" required></textarea>
-                    <label for="message">Message</label>
-                  </div>
-                
-                  <div class="text-center">
+                <form method="POST" id="contactForm" name="contactForm" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contactForm" />
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name" autocomplete="off" required />
+                        <label for="name">Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="off" required />
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Enter your message.." id="message" name="message" style="height: 100px" autocomplete="off" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    
+                    <div class="text-center">
                     <button type="submit" class="btn btn-primary" style="width:100%;max-width:230px;">Send Message</button>
                   </div>
                 </form>
