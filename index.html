@@ -289,10 +289,7 @@
                 <div class="mb-3">
                     <h4>Send a message</h4>
                 </div>
-                <form name="contact" method="POST" netlify>
-                  <!-- Hidden field to catch bots -->
-                  <input type="hidden" name="form-name" value="contact">
-                    
+                <form id="contactForm" method="POST">
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Your name" autocomplete="off" required />
                     <label for="name">Name</label>
