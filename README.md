@@ -13,7 +13,6 @@ I'm a passionate full-stack developer with expertise in building dynamic and sca
 
 ### 📫 Connect With Me  
 - [Portfolio](https://pritamumaiya.netlify.app/)  
-- [Email](mailto:pritamumaiya@gmail.com)  
 
 ### 📊 GitHub Stats  
 ![Pritam's GitHub stats](https://github-readme-stats.vercel.app/api?username=PritamUmaiya&show_icons=true&theme=radical)  
